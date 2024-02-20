@@ -3,13 +3,13 @@
 The code deployes a network core on AWS:
 
 -VPC  
-- Subnet/Subnets     
+-Subnet/Subnets     
 -Internet Gateway  
 -Route Table   
 
 Deployment Example:
 
-![GitHub Image](/img/tf-aws-network-core.jpg)
+![GitHub Image](/img/network-core.png)
 
 
 

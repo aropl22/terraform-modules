@@ -11,18 +11,18 @@ module "vpc1" {
 }
 
 module "subnet1" {
-  source = "./subnet"
+  source     = "./subnet"
   vpc_id     = module.vpc1.vpc_id
   my_subnets = var.my_subnets
-  tags = var.tags
+  tags       = var.tags
 }
 
 module "network1" {
-  source = "./network"
+  source                 = "./network"
   vpc_id                 = module.vpc1.vpc_id
   subnet_cidr            = module.subnet1.subnet_cidr["public_subnet"]
   default_route_table_id = module.vpc1.vpc_default_route_table_id
   private_subnet_id      = module.subnet1.subnet_ids["private_subnet"]
-  tags = var.tags
+  tags                   = var.tags
 
 }

@@ -12,7 +12,7 @@ output "vpc_default_network_acl_id" {
 
 output "aws_internet_gateway_id" {
   value = module.network1.aws_internet_gateway_id
-} 
+}
 
 output "subnet_ids" {
   value = module.subnet1.subnet_ids
