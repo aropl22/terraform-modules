@@ -9,7 +9,7 @@ The code deployes a network core on AWS:
 
 Deployment Example:
 
-![GitHub Image](/img/network-core.png)
+![GitHub Image](/network-core/img/network-core.png)
 
 
 
