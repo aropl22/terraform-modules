@@ -5,52 +5,24 @@ The code deployes a network core on AWS:
 -VPC  
 -Subnet/Subnets     
 -Internet Gateway  
--Route Table   
+-Route Table 
+
+Module Declaration Example:
+
+```terraform
+module "network-core" {
+  source = "./network-core"
+  vpc_name       = var.vpc_name
+  vpc_cidr_block = var.vpc_cidr_block
+  my_subnets     = var.my_subnets
+  tags           = var.default_tags
+
+}
+```
 
 Deployment Example:
 
 ![GitHub Image](/network-core/img/network-core.png)
-
-
-
-Must define backend and AWS access keys
-Terraform defaults to using the local backend, which stores state as a plain file in the current working directory.
-
-More info:  
-https://developer.hashicorp.com/terraform/language/settings/backends/configuration
-
- Examples:
-
-### Terraform Cloud backend file
-
-```terraform
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.31.0"
-    }
-  }
-
-  cloud {
-    organization = "YOUR ORGANIZATION NAME"
-
-    workspaces {
-      name = "YOUR WORKSPACE NAME"
-    }
-  }
-}
-```
-
-### Local Backend
-
-```terraform
-terraform {
-  backend "local" {
-    path = "relative/path/to/terraform.tfstate"
-  }
-}
-```
 
 ## Terraform variable definitions
 
