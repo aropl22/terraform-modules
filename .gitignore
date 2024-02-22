@@ -39,3 +39,6 @@ terraform.rc
 # Ignore backend.tf file
 backend.tf
 
+# Ignore certificate directory
+
+**/certs/*
