@@ -33,3 +33,8 @@ variable "amzlnx_user_data_path" {
 variable "default_tags" {
   type = map(any)
 }
+
+variable "key_path" {
+  description = "EC2 Key Pair"
+  type        = string
+}
